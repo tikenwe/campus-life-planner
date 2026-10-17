@@ -46,8 +46,14 @@ function validateTask(title,date,priority) {
 
 //Validate event information.
 function validEvent(title, date) {
-    if(!isNotEmpty(title)) {
+    if (!isNotEmpty(title)) {
+        return "Please enter an event name.";
+    }
+
+
+    if(!isValidDate(date)) {
         return "Please select a valid event date.";
     }
+
     return "";
 }
