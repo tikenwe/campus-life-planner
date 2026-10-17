@@ -211,7 +211,7 @@ function renderTasks() {
             });
 
         
-        }):
+        });
 
         const deleteButton = document.createElement("button");
         deleteButton.type = "button";
@@ -290,7 +290,7 @@ if (taskForm) {
                 showMessage("Task updated succesfully!");
             }
         } else {
-            const newTask ={
+            const newTask = {
                 id: generatedId(),
                 Title: title
                 description: description,
@@ -335,7 +335,7 @@ if (taskFilter) {
 }
 
 function renderEvents() {
-    eventList.innerHTMl ="";
+    eventList.innerHTMl = "";
      (
     if (events.length === 0) {
         const emptyMessage = document.createElement("p");
@@ -401,7 +401,7 @@ if (eventForm) {
 
         if(title === "" || date ==="") {
             showMessage("Please enter an event name and date.");
-            return:
+            return;
         } 
 
         const newEvent = {
@@ -534,7 +534,7 @@ function initializeApp() {
         !eventList) {
         console.error(
             "some required HTML elements are missing .Check their IDs."
-        ):
+        );
         return;
 
     }
