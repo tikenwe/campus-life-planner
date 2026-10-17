@@ -291,7 +291,7 @@ if (taskForm) {
             }
         } else {
             const newTask = {
-                id: generatedId(),
+                id: generateId(),
                 title: title,
                 description: description,
                 date: date,
