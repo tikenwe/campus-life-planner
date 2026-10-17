@@ -338,39 +338,7 @@ if (taskFilter) {
 
 
 
-if (eventForm) {
-    eventForm.addEventListener("submit", function(event) {
-        event.preventDefault();
 
-        const title = eventTitle.value.trim();
-        const date = eventDate.value;
-
-        const eventError = validateEvent(title,date);
-
-        if (eventError) {
-            showMessage(eventError);
-            return;
-        } 
-
-        const newEvent = {
-            id: generateId(),
-            title: title,
-            date: date 
-        };
-
-        events.push(newEvent);
-        
-        saveData();
-
-        eventForm.reset();
-
-        renderEvents();
-        updateDashboard();
-
-        showMessage("Event added successfully!");
-            
-    });
-}
 
 if (exportButton) {
     exportButton.addEventListener("click", function() {
