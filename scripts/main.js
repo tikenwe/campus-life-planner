@@ -271,8 +271,10 @@ if (taskForm) {
         const priority = taskPriority.value;
 
 
-        if (title ==="" || date === "") {
-            showMessage ("Please  enter a task title and due date.");
+        const taskError = validateTask(title, date, priority);
+
+        if (taskError) {
+            showMessage(taskError);
             return;
         }
 
@@ -399,8 +401,10 @@ if (eventForm) {
         const title = eventTitle.value.trim();
         const date = eventDate.value;
 
-        if(title === "" || date ==="") {
-            showMessage("Please enter an event name and date.");
+        const eventError = validateEvent(title,date);
+
+        if (eventError) {
+            showMessage(eventError);
             return;
         } 
 
