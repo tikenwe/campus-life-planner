@@ -62,7 +62,9 @@ function renderEvents() {
 
 }
 
-if (eventForm) {
+
+function setupEventForm() {
+    if (eventForm) {
     eventForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -94,4 +96,6 @@ if (eventForm) {
         showMessage("Event added successfully!");
             
     });
+}
+
 }

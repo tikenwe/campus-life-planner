@@ -458,6 +458,7 @@ function initializeApp() {
     renderTasks();
     renderEvents();
     updateDashboard();
+    setupEventForm();
 
     console.log( "Campus Life Planner is ready!");
 }
