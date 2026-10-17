@@ -292,7 +292,7 @@ if (taskForm) {
         } else {
             const newTask = {
                 id: generatedId(),
-                Title: title
+                title: title,
                 description: description,
                 date: date,
                 priority: priority,
@@ -335,8 +335,8 @@ if (taskFilter) {
 }
 
 function renderEvents() {
-    eventList.innerHTMl = "";
-     (
+    eventList.innerHTML = "";
+     
     if (events.length === 0) {
         const emptyMessage = document.createElement("p");
         emptyMessage.textContent = "No events added yet.";
