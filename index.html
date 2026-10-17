@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campus Life Planner</title>
+        <link rel="stylesheet" href="style/style.css">
+        <script src="scripts/main.js" defer></script>
+     <head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <h1>Campus Life Planner</h1>
+                <p>Organize your tasks, assignments, and events.</p>
+            </div>
+        </header>
+
+        <nav aria-label="Main navigation">
+            <div class="container nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#events">Events</a>
+            <a href="#settings">settings</a>
+            </div>
+        </nav>
+
+        <main class="container">
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="stats">
+                    <article class ="stat-card">
+                        <h3>Total Tasks</h3>
+                        <p id="total-task">0</p>
+                    </article>
+                    <article class="stat-card">
+                        <h3>Completed</h3>
+                        <p id="completed-task">0</p>
+                    </article>
+                    <article class="stat-card">
+                        <h3>Completed</h3>
+                        <p id="completed-task">0</p>
+                    </article>
+                    <article class="stat-card">
+                        <h3>pending</h3>
+                        <p id="pending-tasks">0</p>
+                    </article>
+                    <article class="stat-card">
+                        <h3>Upcoming Events</h3>
+                        <p id="upcoming-events">0</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="tasks">
+                <h2>Task Manager</h2>
+                <form id="task-form">
+                    <input type="hidden" id="task-id">
+
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id ="task-title"
+                    placeholder="Enter task title" required>
+
+                    <label for="task-description">Description</label>
+                    <textarea id="task-description"
+                    placeholder="Task description"></textarea>
+
+                    <label for="task-date">Due Date</label>
+                    <input type="date" id="task-date" required>
+
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority"> 
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+
+                    <button type="submit" id="task-submit">
+                        Add Task
+                    </button>
+                </form>
+
+                <div class="toolbar">
+                    <label for="task-search">Search Tasks</label>
+                    <input type="search" id="task-search"
+                    placeholder="Search tasks...">
+
+                    <label for="task-filter">Filter</label>
+                    <input type="Search" id="task-search"
+                    placeholder="Search tasks...">
+
+                    <label for="task-filter">Filter</label>
+                    <select id="task filter">
+                        <option value="all">All Tasks</option>
+                        <option value="pending">Pending</option>
+                    </option value="completed">Completed"</option>
+                </select>
+            </div>
+
+            <p id="search-error" role="status"></p>
+            <div id="task-list" class="item-list"></div>
+        </section>
+
+        <section id="events">
+            <h2>Events and Assignments</h2>
+            <form id="event-form">
+                <label for="event-title">Event Name</label>
+                <input type="date" id="event-date" required>
+
+            </button type="submit">Add Event</button>
+        </form>
+
+        <div id=""event-list" class="item-list"></div>
+    </section>
+
+    <section id="settings">
+        <h2>settings and Data</h2>
+        <p>Back up or restore your planner information.</p>
+
+        <button id="export-data" type="button">
+            Export JSON
+        </button>
+
+        <label for="import-data">Import JSON</label>
+        <input type="file" id="import-data"
+        accept=""json,application/json">
+    </section>
+</main>
+
+<div id="message" role="status" aria-live="polite"></div>
+
+<footer>
+    <p>Campus Life Planner</p>
+</footer>
+<p>Campus Life Planner</p>
+</footer>
+</body>
+</html>
+
+                    
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+

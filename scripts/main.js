@@ -131,10 +131,10 @@ function renderTasks() {
         task.description.toLowerCase().includes(searchText);
 
         const matchesFilter =
-            selectedFilter == "all" ||
-            selectedFilter == "" ||
+            selectedFilter === "all" ||
+            selectedFilter === "" ||
             (selectedFilter === "completed" && task.completed) ||
-            (selectedFilter) === "pending" && !task.completed);
+            (selectedFilter === "pending" && !task.completed);
 
             return matchesSearch && matchesFilter;
         });
