@@ -6,7 +6,7 @@ function isNotEmpty(value) {
 }
 
 // Check whether a date has a valid YYYY-MM-DD Format.
-function isValiDate(value) {
+function isValidDate(value) {
     if (typeof value !== "string") {
         return false;
     }
@@ -25,7 +25,7 @@ function isValiDate(value) {
     const month = String(date.getMonth() + 1).padStart(2,"0");
     const day = String(date.getDate()).padStart(2,"0");
 
-    return year + "-" + day === value;
+    return year + "-" + month + "-" + day === value;
 }
 
 //Validate task information.
@@ -34,8 +34,8 @@ function validateTask(title,date,priority) {
         return "please enter a task title.";
     }
 
-    if (!isValidDate(date)) {
-        return "please select a valid task due date";
+    if (!["low", "medium", "high"].includes(priority)) {
+        return "Please select a valid priority.";
     }
 
     if (!isValidDate(date)) {
@@ -45,7 +45,7 @@ function validateTask(title,date,priority) {
 }
 
 //Validate event information.
-function validEvent(title, date) {
+function validateEvent(title, date) {
     if (!isNotEmpty(title)) {
         return "Please enter an event name.";
     }
