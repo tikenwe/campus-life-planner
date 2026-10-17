@@ -380,7 +380,7 @@ function renderEvents() {
 
             saveData();
             renderEvents();
-            updateDahboard();
+            updateDashboard();
 
             showMessage("Event deleted successfully.");
         });
