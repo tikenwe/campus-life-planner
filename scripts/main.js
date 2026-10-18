@@ -368,6 +368,10 @@ if (exportButton) {
             2
         );
 
+        const blob = new Blob([jsonData], {
+            type: "application/json"
+        });
+
         const url = URL.createObjectURL(blob);
 
         const downloadLink = document.createElement("a");
