@@ -6,6 +6,8 @@ const taskTitle = document.getElementById("task-title");
 const taskDescription = document.getElementById("task-description");
 const taskDate = document.getElementById("task-date");
 const taskPriority = document.getElementById("task-priority");
+const taskDuration = document.getElementById("task-duration");
+const taskTag = document.getElementById("task-tag");
 const taskSubmit = document.getElementById("task-submit");
 const taskList = document.getElementById("task-list");
 const taskSearch = document.getElementById("task-search");
@@ -269,6 +271,8 @@ if (taskForm) {
         const description = taskDescription.value.trim();
         const date = taskDate.value;
         const priority = taskPriority.value;
+        const duration = Number(taskDuration.value);
+        const tag =taskTag.value.trim();
 
 
         const taskError = validateTask(title, date, priority);
