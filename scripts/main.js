@@ -117,8 +117,17 @@ function updateDashboard() {
     }
 }
 
+function createSearchRegex(text) {
+    const escaped = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp(escaped, "i");
+}
+
+function highlightSearch(element, text, searchText) {
+    //Paste the full highlighting code here
+}
 function renderTasks() {
     taskList.innerHTML ="";
+    
 
     const searchText = taskSearch
     ? taskSearch.value.toLowerCase().trim()
@@ -128,9 +137,12 @@ function renderTasks() {
      : "all";
 
      const filteredTasks = tasks.filter(task => {
+        const searchRegex = createSearchRegex(searchText);
+        
         const matchesSearch =
-        task.title.toLowerCase().includes(searchText) ||
-        task.description.toLowerCase().includes(searchText);
+         searchRegex.test(task.title) ||
+         searchRegex.test(task.description);
+        
 
         const matchesFilter =
             selectedFilter === "all" ||
