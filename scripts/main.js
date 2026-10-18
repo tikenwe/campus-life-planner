@@ -293,7 +293,7 @@ function checkTaskInput() {
         tag
     );
 
-    const message = document.getElementById("task-message");
+    const message = document.getElementById("message");
     if (message) {
         message.textContent = error;
     }
