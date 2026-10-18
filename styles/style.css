@@ -406,3 +406,18 @@ body.dark-mode textarea{
     padding : 10px 15px;
     cursor: pointer;
 }
+
+/* Skip navigation link */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10p;
+    background: white;
+    color: #111827;
+    padding: 10px 15px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
