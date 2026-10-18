@@ -292,17 +292,26 @@ if (taskForm) {
                 existingTask.description = description;
                 existingTask.date = date;
                 existingTask.priority = priority;
+                existingTask.duration = duration;
+                existingTask.tag = tag;
+                existingTask.updateAt = new Date().toISOString();
 
                 showMessage("Task updated succesfully!");
             }
         } else {
+            const now = new Date().toISOString();
+
             const newTask = {
                 id: generateId(),
                 title: title,
                 description: description,
                 date: date,
                 priority: priority,
-                completed: false 
+                duration: duration,
+                tag: tag,
+                completed: false,
+                createdAt: now,
+                updatedAt: now
             };
 
             tasks.push(newTask);
