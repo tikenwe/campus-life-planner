@@ -10,6 +10,10 @@
         <script src="scripts/main.js" defer></script>
     </head>
     <body>
+        <a href="dashboard" class="skip-link">
+            Skip to main content
+        </a>
+        
         <header class="site-header">
             <div class="container">
                 <h1>CampusMate</h1>
@@ -112,7 +116,7 @@
             <select id="task-filter">
                         <option value="all">All Tasks</option>
                         <option value="pending">Pending</option>
-                    </option value="completed">Completed</option>
+                    <option value="completed">Completed</option>
                 </select>
             </div>
 
@@ -156,14 +160,18 @@
             Switch to Dark Mode
         </button>
         </div>
-        
+
         <button id="export-data" type="button">
             Export JSON
         </button>
 
         <label for="import-data">Import JSON</label>
-        <input type="file" id="import-data"
-        accept=""json,application/json">
+        <input
+         type="file" 
+         id="import-data"
+        accept=".json,application/json"
+        
+    >
     </section>
 </main>
 
