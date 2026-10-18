@@ -7,8 +7,7 @@ function isNotEmpty(value) {
 //Check that a tittle has no leading or trailing spaces.
 function isValidTitle(value) {
     return typeof value === "string" &&
-    /^\S(?:.*\S)?$/.test(value) &&
-    !/\s{2,}/.test(value);
+    /^(?!.*\s{2,})\S(?:.*\S)?$/.test(value);
 }
 
 // Check whether a date has a valid YYYY-MM-DD Format.
