@@ -85,3 +85,10 @@ What I learned
 
 While building CampusMate, I practised DOM manipulation, JavaScript event, form validation, local storage and using GIT to track changes to my project.
 I also learned how to deploy a website using GitHub Pages.
+
+
+## Demo Video
+
+Watch my CampusMate project demonstration on YouTube:
+
+[Watch CampusMate Demo Video](https://youtu.be/yih0E75XJ3k)
