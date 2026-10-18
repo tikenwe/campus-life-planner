@@ -43,7 +43,7 @@ function isvalidDuration(value) {
 //Check that a tag contains letters, spaces, or hyphens.
 function isValidTag(value) {
     return typeof value === "string" &&
-    /^[A-Za-z] + (?:[ -][A-Za-z]+)*$/.test(value);
+    /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/.test(value);
 }
 
 //Validate task information.
