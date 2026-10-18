@@ -47,7 +47,7 @@ function isValidTag(value) {
 }
 
 //Validate task information.
-function validateTask(title,date,priority, duration,tag); {
+function validateTask(title,date,priority, duration,tag) {
     if (!isNotEmpty(title)) {
         return "please enter a task title.";
     }
