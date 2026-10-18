@@ -294,7 +294,7 @@ if (taskForm) {
                 existingTask.priority = priority;
                 existingTask.duration = duration;
                 existingTask.tag = tag;
-                existingTask.updateAt = new Date().toISOString();
+                existingTask.updatedAt = new Date().toISOString();
 
                 showMessage("Task updated succesfully!");
             }
