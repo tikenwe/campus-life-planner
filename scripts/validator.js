@@ -4,6 +4,12 @@
 function isNotEmpty(value) {
     return typeof value === "string" && value.trim() !== "";
 }
+//Check that a tittle has no leading or trailing spaces.
+function isValidTitle(value) {
+    return typeof value === "string" &&
+    /^\S(?:.*\S)?$/.test(value) &&
+    !/\s{2,}/.test(value);
+}
 
 // Check whether a date has a valid YYYY-MM-DD Format.
 function isValidDate(value) {
@@ -34,8 +40,12 @@ function validateTask(title,date,priority) {
         return "please enter a task title.";
     }
 
+    if (!isValidTitle(title)) {
+        return "Task title cannot have extra spaces.";
+    }
+
     if (!["low", "medium", "high"].includes(priority)) {
-        return "Please select a valid priority.";
+        return "Please select a valid task date.";
     }
 
     if (!isValidDate(date)) {

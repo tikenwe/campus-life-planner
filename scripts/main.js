@@ -269,7 +269,7 @@ if (taskForm) {
     taskForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        const  title = taskTitle.value.trim();
+        const  title = taskTitle.value;
         const description = taskDescription.value.trim();
         const date = taskDate.value;
         const priority = taskPriority.value;
