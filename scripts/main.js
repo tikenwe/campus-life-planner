@@ -493,7 +493,7 @@ function setTheme(dark) {
     localStorage.setItem("theme", dark ? "dark" : "light");
 }
 
-setTheme(localeStorage.getItem("theme") === "dark");
+setTheme(localStorage.getItem("theme") === "dark");
 
 if (themeBtn) {
     themeBtn.addEventListener("click",function () {
