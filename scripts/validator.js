@@ -34,8 +34,20 @@ function isValidDate(value) {
     return year + "-" + month + "-" + day === value;
 }
 
+//Check that a duration is a positive whole number.
+function isvalidDuration(value) {
+    return /^(0|[1-9]\d*)$/.test(String(value)) &&
+     Number(value) > 0;
+}
+
+//Check that a tag contains letters, spaces, or hyphens.
+function isValidTag(value) {
+    return typeof value === "string" &&
+    /^[A-Za-z] + (?:[ -][A-Za-z]+)*$/.test(value);
+}
+
 //Validate task information.
-function validateTask(title,date,priority) {
+function validateTask(title,date,priority, duration,tag) {
     if (!isNotEmpty(title)) {
         return "please enter a task title.";
     }
@@ -45,11 +57,11 @@ function validateTask(title,date,priority) {
     }
 
     if (!["low", "medium", "high"].includes(priority)) {
-        return "Please select a valid task date.";
+        return "Please select a valid priority";
     }
 
     if (!isValidDate(date)) {
-        return "Please select a valid priority.";
+        return "Please select a valid task date.";
     }
     return "";
 }
