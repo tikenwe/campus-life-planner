@@ -20,7 +20,7 @@ const eventList = document.getElementById("event-list");
 
 const totalTasks = document.getElementById("total-task");
 const completedTasks = document.getElementById("completed-task");
-const pendingTasks = document.getElementById("pending-task");
+const pendingTasks = document.getElementById("pending-tasks");
 const upcomingEvents = document.getElementById("upcoming-events");
 
 const exportButton = document.getElementById("export-data");
