@@ -314,6 +314,9 @@ footer p{
     }
 
     .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap:8px;
     }
 
@@ -335,7 +338,11 @@ footer p{
         font-size: 21px;
     }
     .stats{
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .stat-card {
+        min-width: 0;
     }
     .toolbar{
         grid-template-columns: 1fr;
