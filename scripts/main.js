@@ -199,6 +199,8 @@ function renderTasks() {
                 taskDescription.value = task.description;
                 taskDate.value =task.date;
                 taskPriority.value = task.priority;
+                taskDuration.value = task.duration ?? "";
+                taskTag.value = task.tag ?? "";
 
                 if (taskSubmit) {
                     taskSubmit.textContent = "Update Task";
