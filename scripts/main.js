@@ -392,7 +392,7 @@ if (exportButton) {
 
 if(importInput) {
     importInput.addEventListener("change", async function (event) {
-        const file = event.target.files[0];s
+        const file = event.target.files[0];
 
         if(!file) {
             return;
