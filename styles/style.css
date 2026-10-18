@@ -370,3 +370,39 @@ footer p{
         transform: none;
     }
 }
+
+/*Dark mode */
+body.dark-mode {
+    background: #111827;
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode section,
+body.dark-mode article{
+    background: #1f2937;
+    color: white;
+}
+
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+    color :white;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea{
+    color:white;
+    border: 1px solid #6b7280;
+    border-color: #6b7280;
+}
+
+#theme-toggle {
+    padding : 10px 15px;
+    cursor: pointer;
+}
