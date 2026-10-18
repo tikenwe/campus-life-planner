@@ -277,6 +277,27 @@ function renderTasks() {
 
 }
 
+
+function checkTaskInput() {
+    const title = taskTitle.value;
+    const date = taskDate.value;
+    const priority = taskPriority.value;
+    const duration = taskDuration.value;
+    const tag = taskTag.value;
+
+    const error = validateTask(
+        title,
+        date,
+        priority,
+        duration,
+        tag
+    );
+
+    const message = document.getElementById("task-message");
+    if (message) {
+        message.textContent = error;
+    }
+}
 if (taskForm) {
     taskForm.addEventListener("submit", function(event) {
         event.preventDefault();
