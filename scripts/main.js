@@ -484,3 +484,21 @@ function initializeApp() {
 
 initializeApp();
 
+//Dark and Light mode
+const themeBtn = document.getElementById("theme-toggle");
+
+function setTheme(dark) {
+    document.body.classList.toggle("dark-mode", dark);
+    themeBtn.textContent = dark ? "Light Mode" : "DarkMode";
+    localStorage.setItem("theme", dark ? "dark" : "light");
+}
+
+setTheme(localeStorage.getItem("theme") === "dark");
+
+if (themeBtn) {
+    themeBtn.addEventListener("click",function () {
+        setTheme(!document.body.classList.contains("dark-mode"));
+    });
+
+}
+
