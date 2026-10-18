@@ -47,7 +47,7 @@ function isValidTag(value) {
 }
 
 //Validate task information.
-function validateTask(title,date,priority, duration,tag) {
+function validateTask(title,date,priority, duration,tag); {
     if (!isNotEmpty(title)) {
         return "please enter a task title.";
     }
@@ -62,6 +62,13 @@ function validateTask(title,date,priority, duration,tag) {
 
     if (!isValidDate(date)) {
         return "Please select a valid task date.";
+    }
+     
+    if(!isvalidDuration(duration)) {
+        return "Please enter a avalid duration in minutes.";
+    }
+    if (!isValidTag(tag)) {
+        return "Please enter a valid tag using letters, spaces, or hyphens.";
     }
     return "";
 }
