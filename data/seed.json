@@ -1,0 +1,24 @@
+{
+    "tasks":[
+        {
+            "id": "sample-task-1",
+            "title": "Study JavaScript",
+            "description": "Revise Javascript basics",
+            "date": "2026-10-25",
+            "priority": "high",
+            "duration": 60,
+            "tag": "Academic",
+            "completed": false,
+            "createdAt": "2026-10-18T10:00.00.000Z",
+            "updatedAt": "2026-10-18T10:00:00.000Z"
+        }
+    ],
+    "events":  [
+        {
+    
+                    "id": "sample-event-1",
+                    "title": "Computer Science Workshop",
+                    "date": "2026-10-28"
+                }
+            ]
+        }
