@@ -277,7 +277,7 @@ if (taskForm) {
         const tag =taskTag.value.trim();
 
 
-        const taskError = validateTask(title, date, priority);
+        const taskError = validateTask(title, date, priority, duration, tag);
 
         if (taskError) {
             showMessage(taskError);
